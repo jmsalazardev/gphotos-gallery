@@ -1,7 +1,19 @@
 {
   "name": "gphotos-gallery",
   "version": "0.1.0",
+  "description": "A gphotos album gallery",
   "private": false,
+  "keywords": [
+    "google photos",
+    "gallery",
+    "react"
+  ],
+  "homepage": "https://github.com/jmsalazardev/gphotos-gallery#readme",
+  "author": {
+    "name": "Jose Miguel Salazar",
+    "email": "admin@jmsalazar.dev"
+  },
+  "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
