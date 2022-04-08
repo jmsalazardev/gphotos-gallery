@@ -85,13 +85,10 @@ export default function Album() {
     }
 
     const criteria = enteredText.trim();
-    console.log('criteria', criteria);
     if (criteria.length > 0) {
-      console.log('criteria-1', criteria);
       const regex = new RegExp(criteria, 'g');
       setFilteredPhotos(photos.filter(({ name }) => name.match(regex)));
     } else {
-      console.log('criteria-2', criteria);
       clearFilter();
     }
   };
@@ -103,7 +100,6 @@ export default function Album() {
   const clearFilter = () => {
     setEnteredText('');
     setFilteredPhotos(photos);
-    console.log('filter cleared');
   };
 
   return (

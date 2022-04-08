@@ -1,9 +1,10 @@
 {
   "name": "gphotos-gallery",
-  "version": "0.1.0",
-  "description": "A gphotos album gallery",
+  "version": "0.1.1",
+  "description": "A photo gallery for gphotos-scraper",
   "private": false,
   "keywords": [
+    "gphotos-scraper",
     "google photos",
     "gallery",
     "react"
@@ -12,7 +13,7 @@
     "name": "Jose Miguel Salazar",
     "email": "admin@jmsalazar.dev"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
@@ -44,7 +45,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,ts,tsx} --quiet --no-error-on-unmatched-pattern",
     "prettier:fix": "prettier src/**/*.{js,ts,tsx} --write --no-error-on-unmatched-pattern",
-    "prettier:check": "prettier src/**/*.{js,ts,tsx} --check --no-error-on-unmatched-pattern"
+    "prettier:check": "prettier src/**/*.{js,ts,tsx} --check --no-error-on-unmatched-pattern",
+    "npm:npm-check-updates": "npx npm-check-updates --errorLevel 1",
+    "npm:upgrade": "npx npm-check-updates -iu"
   },
   "browserslist": {
     "production": [

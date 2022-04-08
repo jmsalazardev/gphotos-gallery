@@ -28,18 +28,8 @@ export default function Albums() {
     index: number
   ) => {
     setSelectedIndex(index);
-
     const { id } = albums[index];
-
     navigate(id);
-    /*
-    try {
-      const resultAction = await dispatch(fetchPhotosByAlbumId(id)).unwrap();
-      console.log({resultAction});
-    } catch (rejectedValueOrSerializedError) {
-      // handle error here
-    }
-    */
   };
 
   return (
