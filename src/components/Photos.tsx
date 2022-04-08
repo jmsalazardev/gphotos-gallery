@@ -5,7 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { Photo } from '../interfaces';
+import { Photo } from '../common/interfaces';
 
 export interface PhotosProps {
   data: Photo[];
@@ -13,7 +13,7 @@ export interface PhotosProps {
 }
 
 const copyToClipboard = (photo: Photo) => {
-  const photoUrl = `${photo.url}#width=${photo.width}&height=${photo.height}`
+  const photoUrl = `${photo.url}#width=${photo.width}&height=${photo.height}`;
   navigator.clipboard.writeText(photoUrl);
 };
 
@@ -22,16 +22,12 @@ export default function Photos(props: PhotosProps) {
 
   return (
     <ImageList sx={{ flexGrow: 1 }}>
-      <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div">{name}</ListSubheader>
+      <ImageListItem key='Subheader' cols={2}>
+        <ListSubheader component='div'>{name}</ListSubheader>
       </ImageListItem>
       {data.map((item) => (
         <ImageListItem key={item.url}>
-          <img
-            src={`${item.url}=s248`}
-            alt={item.name}
-            loading="lazy"
-          />
+          <img src={`${item.url}=s248`} alt={item.name} loading='lazy' />
           <ImageListItemBar
             title={item.name}
             subtitle={`${item.width}x${item.height}`}
@@ -40,7 +36,7 @@ export default function Photos(props: PhotosProps) {
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                 aria-label={`copy public url ${item.name}`}
                 onClick={() => {
-                  copyToClipboard(item)
+                  copyToClipboard(item);
                 }}
               >
                 <ContentCopyIcon />
