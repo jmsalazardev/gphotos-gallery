@@ -6,7 +6,7 @@ export const fetchPhotosByAlbumId = createAsyncThunk(
   async (albumId: string): Promise<Photo[]> => {
     const response = await fetch('/data/photo.json');
     const data = await response.json() as any as Photo[];
-    return data.filter((item) => item.albumId === albumId).sort((a, b) => a.name.localeCompare(b.name));
+    return data.filter((item) => item.albumId !== albumId).sort((a, b) => a.name.localeCompare(b.name));
   },
 );
 
