@@ -1,6 +1,6 @@
 {
   "name": "gphotos-gallery",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A photo gallery for gphotos-scraper",
   "private": false,
   "homepage": "https://jmsalazardev.github.io/gphotos-gallery",
