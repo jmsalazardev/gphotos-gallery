@@ -1,8 +1,9 @@
 {
   "name": "gphotos-gallery",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A photo gallery for gphotos-scraper",
   "private": false,
+  "homepage": "https://jmsalazardev.github.io/gphotos-gallery",
   "keywords": [
     "gphotos-scraper",
     "google photos",
@@ -47,7 +48,9 @@
     "prettier:fix": "prettier src/**/*.{js,ts,tsx} --write --no-error-on-unmatched-pattern",
     "prettier:check": "prettier src/**/*.{js,ts,tsx} --check --no-error-on-unmatched-pattern",
     "npm:npm-check-updates": "npx npm-check-updates --errorLevel 1",
-    "npm:upgrade": "npx npm-check-updates -iu"
+    "npm:upgrade": "npx npm-check-updates -iu",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -70,6 +73,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.2"
