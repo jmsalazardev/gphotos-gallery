@@ -4,7 +4,9 @@ A photo gallery for gphotos-scraper
 
 ## Description
 
-gphotos-gallery allow you to see your photos extracted using gphotos-scraper and copy the public url
+gphotos-gallery allow you to see your photos extracted using [gphotos-scraper](https://github.com/jmsalazardev/gphotos-scraper) and copy the public url.
+
+
 
 - copy photo's public url
 - display basic information such:
@@ -14,12 +16,13 @@ gphotos-gallery allow you to see your photos extracted using gphotos-scraper and
     - image size
     - creation date
 
-1. [Instalation steps](#instalation)
-2. [Technology stack](#technology)
 
-<a name="instalation"></a>
+## Demo
+https://jmsalazardev.github.io/gphotos-gallery/
 
-### Instalation steps
+
+
+## Instalation steps
 
 1. Clone this repository to destination folder:
 
@@ -37,7 +40,7 @@ gphotos-gallery allow you to see your photos extracted using gphotos-scraper and
 
 <a name="usage"></a>
 
-### Usage
+## Usage
 
 1. Copy your album.json and photo.json in public/data 
 2. Start the application
