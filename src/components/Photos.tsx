@@ -14,7 +14,29 @@ export interface PhotosProps {
 
 const copyToClipboard = (photo: Photo) => {
   const photoUrl = `${photo.url}#width=${photo.width}&height=${photo.height}`;
-  navigator.clipboard.writeText(photoUrl);
+
+  if ('clipboardData' in window) {
+    const { clipboardData } = window as any;
+    return clipboardData.setData("Text", photoUrl);
+  }
+
+  if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+    const textarea = document.createElement("textarea");
+    textarea.textContent = photoUrl;
+    textarea.style.position = "fixed";
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      return document.execCommand("copy");
+    }
+    catch (ex) {
+      return prompt("Copy to clipboard: Ctrl+C, Enter", photoUrl);
+    }
+    finally {
+      document.body.removeChild(textarea);
+    }
+  }
+
 };
 
 export default function Photos(props: PhotosProps) {
