@@ -70,8 +70,11 @@ export default function Album() {
   useEffect(() => {
     dispatch(fetchAlbums());
     dispatch(fetchPhotosByAlbumId(`${id}`));
+  }, []);
+
+  useEffect(() => {
     clearFilter();
-  }, [dispatch]);
+  }, [photos]);
 
   const [album] = albums.filter((item) => item.id === id);
 
