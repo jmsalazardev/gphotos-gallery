@@ -4,7 +4,7 @@ import { Album, AlbumsState } from '../../common/interfaces';
 export const fetchAlbums = createAsyncThunk(
   'albums',
   async (): Promise<Album[]> => {
-    const response = await fetch('/data/album.json');
+    const response = await fetch('/gphotos-gallery/data/album.json');
     const data = await response.json() as any as Album[];
     data.sort((a, b) => a.title.localeCompare(b.title));
     return data;
